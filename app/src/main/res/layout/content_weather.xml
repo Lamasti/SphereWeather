@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#42413e"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="fr.gauthierperea.spherewheather.Weather"
+    tools:showIn="@layout/activity_weather">
+
+    <LinearLayout android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:orientation="horizontal"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/linearLayout">
+
+        <Button
+            android:id="@+id/btn_celcius"
+            android:layout_width="0dp"
+            android:layout_height="57dp"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:text="C"
+            android:textColor="#FFFFFF"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="0dp" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="57dp"
+            android:layout_weight="1"
+            android:id="@+id/btn_kelvin"
+            android:text="K"
+            android:textColor="#FFFFFF"
+            android:background="#42413e"
+            tools:layout_editor_absoluteY="0dp"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <Button
+            android:id="@+id/btn_farenheit"
+            android:layout_width="0dp"
+            android:layout_height="57dp"
+            android:layout_weight="1"
+            android:background="#42413e"
+            android:text="F"
+            android:textColor="#FFFFFF"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="199dp"
+        android:layout_height="173dp"
+        android:id="@+id/degre"
+        android:textColor="#FFFFFF"
+        android:padding="30dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="25sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="17dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="-42dp"
+        app:layout_constraintGuide_end="364dp" />
+
+    <TextView
+        android:id="@+id/text_weather"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/degre"
+        app:layout_constraintRight_toRightOf="@+id/degre"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/degre"
+        app:layout_constraintHorizontal_bias="1.0" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="34dp"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="34dp"
+        app:layout_constraintRight_toRightOf="@+id/text_weather"
+        android:layout_marginTop="68dp"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/linearLayout"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="34dp"
+        app:layout_constraintHorizontal_bias="0.346" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/logo_sphere"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/title"
+        android:layout_marginEnd="26dp"
+        app:layout_constraintRight_toRightOf="@+id/title"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="26dp" />
+
+</android.support.constraint.ConstraintLayout>
